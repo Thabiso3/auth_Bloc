@@ -19,10 +19,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     // executed when new user getter changes in repository
     on<AuthStateChangedEvent>((event, emit) {
       if (event.user != null) {
-        emit(state.copyWith(authStatus: AuthStatus.authenticated, user: null));
-      } else {
         emit(state.copyWith(
-            authStatus: AuthStatus.unauthenticated, user: event.user));
+            authStatus: AuthStatus.authenticated, user: event.user));
+      } else {
+        emit(
+            state.copyWith(authStatus: AuthStatus.unauthenticated, user: null));
       }
     });
 

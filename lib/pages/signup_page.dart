@@ -1,4 +1,4 @@
-import 'package:fb_auth_bloc/blocs/cubit/signup_cubit.dart';
+import 'package:fb_auth_bloc/blocs/signup/signup_cubit.dart';
 import 'package:fb_auth_bloc/utils/error_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
